@@ -69,11 +69,19 @@ A **Dual-Port RAM** allows simultaneous access to two ports, typically one for r
 - Simple dual-port access with clean and predictable behavior.
 - Good starting point for synchronous RAM understanding.
 
+Output Waveform: 
+
+![16x8 Dual Port RAM with Same Clock](https://github.com/user-attachments/assets/f1de564d-32ca-4e50-a997-68f8f17bfec5)
+
 ### 📙 Version 2: Dual Clock Domain RAM
 
 - Read and write ports use **independent clocks**.
 - Simulates behavior in multi-clock domain systems.
 - Requires careful synchronization in the testbench.
+
+Output Waveform:
+
+![16x8 Dual Port RAM with Two Clocks](https://github.com/user-attachments/assets/d599e75f-6094-42e6-b4fd-4a021c3d0ea5)
 
 ### 📗 Version 3: RAM with `$test$plusargs` Control
 
