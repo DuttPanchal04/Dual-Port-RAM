@@ -1,0 +1,5 @@
+If the Run Time Argument is "WRITE_FROM_A" then only this case will be active and it writes the data from port-A to memory location.
+If the Run Time Argument is "WRITE_FROM_B" then only this case will be active and it writes the data from port-B to memory location.
+If the Run Time Argument is "READ_FROM_A" then only this case will be active and it reads the data from port-A from memory location.
+If the Run Time Argument is "READ_FROM_B" then only this case will be active and it reads the data from port-B from memory location.
+If the Run Time Argument is "RESET" then only this case will be active and it clears all locations and outputs.
