@@ -111,7 +111,11 @@ All testbenches are designed to be self-checking and simulate real-world conditi
    - Add `+mode=readfirst` or similar in the **Command-line arguments** field
 5. Click **Run Simulation**
 
-> Optionally, you can copy-paste the code from each version’s folder into EDA Playground or provide direct links to your playgrounds if public.
+EDA Playground Links:
+
+- DPRAM with One Clock: https://www.edaplayground.com/x/pKzQ
+- DPRAM with Two Clock: https://www.edaplayground.com/x/96td
+- DPRAM with $test$plusargs: https://www.edaplayground.com/x/Y77C
 
 ---
 
