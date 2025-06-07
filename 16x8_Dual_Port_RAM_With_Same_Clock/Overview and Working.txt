@@ -1,0 +1,27 @@
+Overview and Working
+------------------------
+
+This is a 16x8 Dual Port RAM where Number of Location (depth) = 16, Data Bus width = 8, Address Bus width = 4 ( as 2^4 = 16 ).
+
+Here 8-bit data input and output are defined. 1 bit write enable for both port A and B. 4 bit address bus width.
+
+If write enable = 1 => then only port can able to write data through (din) to specific memory address location (4-bit).
+
+Behaviour at output:
+------------
+
+Initial => both write enable control signals are low. Some data in din_a and din_b. and mentioned particular address to store data. Here, dout_a and dout_b will be X.
+
+after #5 DELAY => we enables write control signals for both ports at high. so at first clock egde, it will give Write access to ports. still data will not write immediatly in the memory address location. Still, dout_a and dout_b will be X.
+
+On the next clk egde, now both port input data has been write to memory address specified. now dout_a and dout_b will be updated.
+
+dout_a and dout_b will not change IMMEDIATLY after enabling write for ports. It will only change at next clk egde. This is Synchronous behaviour.
+
+Now input data from both Port A and B has been stored successfully as you will see in simulation. Now we have to read that stored data.
+
+For that, I declared control signals called Read Enable that allows port to read data from memory address locations. If re_a and re_b both are 1 => then only ports will read the data on next positive clk edge.
+
+And there is a simple logic I have added is Reset ( Active Low ). When reset = 0, write and read process will run smoothly. but when reset goes to = 1, then I cleared ( making 0 ) all 16 memory locations and dout pin of both ports. 
+
+So, this is a basic 16x8 Dual Port RAM i have implemented here.
