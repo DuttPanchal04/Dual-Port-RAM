@@ -1,0 +1,89 @@
+$date
+	Sat Jun  7 02:15:45 2025
+$end
+
+$version
+	Synopsys VCS version U-2023.03-SP2_Full64
+$end
+
+$timescale
+	1ns
+$end
+
+$comment Csum: 1 b97dc8fc5e7891b8 $end
+
+
+$scope module tb $end
+$var reg 8 ! din_a [7:0] $end
+$var reg 8 " din_b [7:0] $end
+$var reg 4 # addr_a [3:0] $end
+$var reg 4 $ addr_b [3:0] $end
+$var reg 1 % we_a $end
+$var reg 1 & we_b $end
+$var reg 1 ' re_a $end
+$var reg 1 ( re_b $end
+$var wire 8 ) dout_a [7:0] $end
+$var wire 8 * dout_b [7:0] $end
+$var reg 1 + clk $end
+$var reg 1 , rst $end
+
+$scope module dut $end
+$var wire 1 + clk $end
+$var wire 1 , rst $end
+$var wire 8 ! din_a [7:0] $end
+$var reg 8 ) dout_a [7:0] $end
+$var wire 4 # addr_a [3:0] $end
+$var wire 1 % we_a $end
+$var wire 1 ' re_a $end
+$var wire 8 " din_b [7:0] $end
+$var reg 8 * dout_b [7:0] $end
+$var wire 4 $ addr_b [3:0] $end
+$var wire 1 & we_b $end
+$var wire 1 ( re_b $end
+
+$scope begin unnamed$$_0 $end
+$var integer 32 - i $end
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+0+
+0'
+0(
+0,
+0%
+0&
+b1010 #
+b1111 $
+b00000001 !
+b00000010 "
+bxxxxxxxx )
+bxxxxxxxx *
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -
+$end
+#5
+1+
+1%
+1&
+#10
+0+
+#15
+1+
+0%
+0&
+1'
+1(
+b00000001 )
+b00000010 *
+#20
+0+
+#25
+1+
+#30
+0+
