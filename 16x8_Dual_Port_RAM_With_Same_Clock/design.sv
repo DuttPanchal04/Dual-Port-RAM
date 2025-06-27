@@ -37,26 +37,37 @@ module dual_port_ram #(
 
     integer i;
 
-    if(!rst) begin
+    if(rst) begin
 
+      
       // For port-A write
       if(we_a) 
         mem[addr_a] <= din_a;
-
+        
+      
+      
+      // For writing input data to only first and last location of ram
+      /*if(we_a) begin
+        mem[0] <= din_a;
+        mem[depth-1] <= din_a;
+      end
+	*/
+      
+      
       // For port-A read
       if(re_a)
-
         dout_a <= mem[addr_a]; // for reading port-A data from Port-A
       
       // dout_a <= mem[addr_b]; // for reading port-B data from port-A
 
+      
       // For port-B write
       if(we_b) 
         mem[addr_b] <= din_b;
 
+      
       // For port-B read
       if(re_b)
-
         dout_b <= mem[addr_b]; // for reading port-B data from port-B
       
       // dout_b <= mem[addr_a]; // for reading port-A input data from port-B
